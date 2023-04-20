@@ -10,6 +10,10 @@ export const DEPEND = {
     VAE: "visual-active-effects",
     WG: "warpgate"
   };
+  export const WORLD_DEFAULTS = {
+    addConditions: true,
+    replaceTokenConditions: true
+  }
   export const COLOR_DEFAULTS = {
     itemAttuned: "#21c050",
     itemNotAttuned: "#c2c2c2",

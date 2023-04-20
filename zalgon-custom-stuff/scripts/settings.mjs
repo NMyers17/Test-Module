@@ -1,13 +1,26 @@
 import {
   COLOR_DEFAULTS,
   MODULE,
-  RARITY_DEFAULTS
+  RARITY_DEFAULTS,
+  WORLD_DEFAULTS
 } from "./const.mjs";
 import {refreshColors} from "./modules/sheetEdits.mjs";
 
 export function registerSettings() {
   _registerSettings();
   _registerSettingsMenus();
+}
+
+function _registerSettings() {
+  game.settings.register(MODULE, "foragingDC", {
+    name: "ZALGON.SettingsForagingDifficultyName",
+    hint: "ZALGON.SettingsForagingDifficultyHint",
+    scope: "world",
+    config: true,
+    type: Number,
+    default: 15,
+    requiresReload: false
+  });
 }
 
 function _registerSettingsMenus() {
